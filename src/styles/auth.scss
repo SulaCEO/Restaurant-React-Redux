@@ -1,0 +1,88 @@
+.auth{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    .tit{
+        font-weight: 700;
+        font-size: 30px;
+        margin-bottom: 70px;
+    }
+    .btn{
+        @extend %btn;
+        background-color: $green;
+        color: white;
+        font-size: 18px;
+        padding: 10px 0;
+        border-radius: 12px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        &:hover{
+            background-color: #6a9670;
+        }
+        &:active{
+            color: $white-text;
+            background-color: #577b5c;
+        }
+    }
+    .inp{
+        @extend %btn;
+        color: white;
+        margin-bottom: 20px;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 0 5px 7px 5px;
+        border-bottom: 1px solid $white-text;
+    }
+}
+
+.register{
+    &__registered{
+        color: $white-text;
+        font-size: 14px;
+        &:hover{
+            color: white;
+            text-decoration: underline;
+        }
+    }
+}
+
+.register2{
+    &__field{
+        position: relative;
+        &-passw{
+            width: 100%;
+        }
+        &-eye{
+            cursor: pointer;
+            opacity: 0.8;
+            position: absolute;
+            top: 0;
+            right: 0;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    &__email{
+        cursor: pointer;
+        margin-bottom: 20px;
+        font-weight: 700;
+        color: $white-text;
+        &:hover{
+            color: white;
+        }
+        svg{
+            margin-left: 5px;
+        }
+    }
+    &__btn{
+        color: white;
+        &:active{
+            color: $white-text;
+        }
+    }
+}
